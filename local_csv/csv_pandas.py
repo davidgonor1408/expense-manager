@@ -40,6 +40,8 @@ class ExpenseManager:
     def edit_expense(self):
         expense_id = int(input("Expense ID: "))
         while expense_id not in self.expenses:
+            if expense_id == 0:
+                return
             expense_id = int(input("Expense ID: "))
         self.add_new_expense(ts=expense_id)
 
